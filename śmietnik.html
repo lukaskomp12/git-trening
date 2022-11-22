@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+ <script>
+      
+            function getEmailParts(email){
+
+            let monkeyInd = email.indexOf("@")
+            if (monkeyInd <0) return false;
+            /* return true - dlaczego gdy mam 2x return true 
+            funkcja źle działa? źle pokazuje w devtoolsach*/
+            let dotInd = email.indexOf(".", monkeyInd);
+            if (dotInd == -1) return false;
+            return true;
+            }
+            const email1= "lukaskomp@wp.pl"
+            console.log(email1,getEmailParts(email1))
+            const email2 = "annawppl"
+            console.log(email2,getEmailParts(email2))
+
+   
+</script>   
+
+
+</body>
+</html>
